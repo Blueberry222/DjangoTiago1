@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Blog - Augusto</title>
+    </head>
+    {% for post in posts %}
+    <body>
+        <div>
+            <h2>Titulo: {{post.titulo}}</h2>
+            <p>Autor: {{post.autor}}</p>
+            <p>Autor: {{post.conteudo|linebreaks}}</p>
+        </div>
+        {% endfor %}
+            
+    </body>
+</html>
