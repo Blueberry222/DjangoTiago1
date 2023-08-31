@@ -10,14 +10,12 @@ class Post(models.Model):
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     # campo de texto maiores
     conteudo = models.TextField()
-    # data de criação do post
-    data = models.DateTimeField(default=timezone.now)
 
     def __str__(self) -> str:
         return self.titulo
     
     class Meta:
-        ordering = ['-data']
+        ordering = ['-titulo']
         verbose_name = "Post"
         verbose_name_plural = "Posts"
 
